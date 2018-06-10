@@ -21,7 +21,7 @@ while i <= numFiles:
     newFilename = newFilename.replace('&#039;',"'")
     newFilename = newFilename.replace('/','')
     if newFilename in uniqueFilenames:
-        newFilename +=  + '(' + str(k) + ')'
+        newFilename += '(' + str(k) + ')'
         k += 1
     else:
         uniqueFilenames.append(newFilename)
