@@ -8,7 +8,7 @@ uniqueFilenames = []
 
 while i <= numFiles:
     fileName = str(i) + '.html'
-    file = open(fileName,'r')
+    file = open(fileName,'r', encoding='utf8')
     fileContents = []
     newFilename = ''
     for line in file:
@@ -26,7 +26,7 @@ while i <= numFiles:
     else:
         uniqueFilenames.append(newFilename)
     newFilename += '.html'
-    newFile = open(newFilename, 'w')
+    newFile = open(newFilename, 'w', encoding='utf8')
     newFile.writelines(fileContents)
     file.close()
     os.remove(fileName)
